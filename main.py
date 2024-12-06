@@ -41,7 +41,7 @@ def login_azure(login, password) -> None:
 
 def login_to_azure(login: str, password: str) -> None:
     azure = login_azure(login, password)
-    print(f"login has benn logged")
+    print(f"Login has benn logged")
 
 
 login_to_azure(LOGIN, PASSWORD)
