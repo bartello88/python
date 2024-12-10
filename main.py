@@ -65,3 +65,4 @@ frontnd_logger = create_logger("Frontend_App", "frontend.log", "DEBUG")
 frontend_function(frontnd_logger)
 
 a = 10
+b = 20
