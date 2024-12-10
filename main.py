@@ -63,3 +63,5 @@ def logging_examples() -> None:
 logging_examples()
 frontnd_logger = create_logger("Frontend_App", "frontend.log", "DEBUG")
 frontend_function(frontnd_logger)
+
+a = 10
