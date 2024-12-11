@@ -7,7 +7,8 @@ date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%SZ")
 logging.basicConfig(filename="logs.log", level=logging.INFO)
 logger = logging.getLogger("app")
 
-#%%#
+
+# %%#
 def show_error(a: int) -> int:
     """
     Docstring: A new function
@@ -35,7 +36,7 @@ def devide_by_zero(a: int, b: int) -> int:
         print("Job done")
 
 
-devide_by_zero()
+devide_by_zero(3, 4)
 
 
 # %%
