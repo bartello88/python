@@ -19,7 +19,6 @@ logging.basicConfig(filename="logs.log", level=logging.INFO)
 logger = logging.getLogger("app")
 
 
-
 def show_error(a: int) -> int:
     if a < 4:
         raise Exception("Not working")
@@ -39,17 +38,13 @@ def login_azure(login, password) -> None:
 
 
 def login_to_azure(login: str, password: str) -> None:
-    azure = login_azure(login, password)
-    print(f"Login has benn logged")
+    print("Login has benn logged")
 
 
 login_to_azure(LOGIN, PASSWORD)
 
 
 def logging_examples() -> None:
-
-    LOG_HOST = "asdasd"
-    LOG_PORT = 3467
 
     logger = create_logger("Test_Loger", "logger.log", "INFO")
     logger.info("asdasd")
