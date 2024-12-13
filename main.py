@@ -18,7 +18,6 @@ date = datetime.datetime.now().strftime("%y-%m-%d %H:%M:%SZ")
 logging.basicConfig(filename="logs.log", level=logging.INFO)
 logger = logging.getLogger("app")
 
-name: str = "Bart"
 
 
 def show_error(a: int) -> int:
