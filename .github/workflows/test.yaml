@@ -33,3 +33,12 @@ jobs:
         run: pip install pytest
       - name: Run tests
         run: pytest -vv
+  run_code:
+    runs-on: windows-latest
+    steps:
+      - name: Run code and print file
+        run: |
+          python main.py
+          ls
+        
+
