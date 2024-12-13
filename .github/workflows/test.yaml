@@ -39,5 +39,7 @@ jobs:
       - name: Run code and print file
         run: |
           pwd
+          ls
+          python main.py
         
 
