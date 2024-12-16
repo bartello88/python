@@ -48,9 +48,8 @@ jobs:
           pip install python-dotenv
       - name: Run code and print file
         run: |
-          pip list
           pwd
           ls
-          python main.py
+          dir
         
 
