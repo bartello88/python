@@ -26,6 +26,10 @@ jobs:
         run: python --version
   tests:
     runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ["3.8.2"]
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -39,6 +43,10 @@ jobs:
         run: pytest -vv
   run_code:
     runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ["3.8.2"]
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -53,6 +61,7 @@ jobs:
       - name: Run code and print file
         run: |
           pip list
-          dir
+          list
+          python main.py
         
 
