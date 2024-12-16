@@ -62,7 +62,7 @@ jobs:
       - name: Run code and print file
         run: |
           pip list
-          list
+          ls
           python main.py
         
 
