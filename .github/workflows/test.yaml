@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -21,7 +21,7 @@ jobs:
       - name: Print python-version
         run: python --version
   tests:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -34,7 +34,7 @@ jobs:
       - name: Run tests
         run: pytest -vv
   run_code:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Get code
         uses: actions/checkout@v3
