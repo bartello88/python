@@ -1,68 +1,68 @@
-# import logging
-# from logging.handlers import SysLogHandler
-# import datetime
-# import flask
-# import pandas
-# import os
+import logging
+from logging.handlers import SysLogHandler
+import datetime
+import flask
+import pandas
+import os
 
-# # from dotenv import load_dotenv, dotenv_values
+# from dotenv import load_dotenv, dotenv_values
 
-# from source.frontend import frontend_function
-# from source.frontend import create_logger
-
-
-# # load_dotenv()
-# # config_variables = dotenv_values(".env")
+from source.frontend import frontend_function
+from source.frontend import create_logger
 
 
-# date = datetime.datetime.now().strftime("%y-%m-%d %H:%M:%SZ")
-
-# logging.basicConfig(filename="logs.log", level=logging.INFO)
-# logger = logging.getLogger("app")
+# load_dotenv()
+# config_variables = dotenv_values(".env")
 
 
-# def show_error(a: int) -> int:
-#     if a < 4:
-#         raise Exception("Not working")
-#     else:
-#         return a
+date = datetime.datetime.now().strftime("%y-%m-%d %H:%M:%SZ")
+
+logging.basicConfig(filename="logs.log", level=logging.INFO)
+logger = logging.getLogger("app")
 
 
-# # LOGIN = config_variables["LOGIN"]
-# # PASSWORD = config_variables["PASSWORD"]
+def show_error(a: int) -> int:
+    if a < 4:
+        raise Exception("Not working")
+    else:
+        return a
 
 
-# def login_azure(login, password) -> None:
-#     if login and password:
-#         print("logged successfully")
-#     else:
-#         print("Missing credencials")
+# LOGIN = config_variables["LOGIN"]
+# PASSWORD = config_variables["PASSWORD"]
 
 
-# def login_to_azure(login: str, password: str) -> None:
-#     print("Login has benn logged")
+def login_azure(login, password) -> None:
+    if login and password:
+        print("logged successfully")
+    else:
+        print("Missing credencials")
 
 
-# # login_to_azure(LOGIN, PASSWORD)
+def login_to_azure(login: str, password: str) -> None:
+    print("Login has benn logged")
 
 
-# def logging_examples() -> None:
-
-#     logger = create_logger("Test_Loger", "logger.log", "INFO")
-#     logger.info("asdasd")
-#     console_logger = create_logger(
-#         "Test_console", "frontend.log", "INFO", handler=logging.StreamHandler
-#     )
-#     console_logger.info("asdasdasd")
+# login_to_azure(LOGIN, PASSWORD)
 
 
-# logging_examples()
-# frontnd_logger = create_logger("Frontend_App", "frontend.log", "DEBUG")
-# frontend_function(frontnd_logger)
+def logging_examples() -> None:
 
-# a = 10
-# b = 20
-# c = 10
-# sdfsdfsf = 234
+    logger = create_logger("Test_Loger", "logger.log", "INFO")
+    logger.info("asdasd")
+    console_logger = create_logger(
+        "Test_console", "frontend.log", "INFO", handler=logging.StreamHandler
+    )
+    console_logger.info("asdasdasd")
+
+
+logging_examples()
+frontnd_logger = create_logger("Frontend_App", "frontend.log", "DEBUG")
+frontend_function(frontnd_logger)
+
+a = 10
+b = 20
+c = 10
+sdfsdfsf = 234
 
 print("Hello")
