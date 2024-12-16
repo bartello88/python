@@ -48,6 +48,7 @@ jobs:
           pip install python-dotenv flask pandas
       - name: Run code and print file
         run: |
-          python -m main.py
+          pip list
+          dir
         
 
