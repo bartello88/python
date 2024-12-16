@@ -67,6 +67,7 @@ jobs:
           echo "${{ secrets.PASSWORD }}" >> .env
       - name: Run code and print file
         run: |
+          cat .env
           pip list
           ls
           python main.py
