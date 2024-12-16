@@ -30,7 +30,7 @@ jobs:
         with:
           python-version: '3.1'
       - name: Install pytest
-        run: pip install pytest, flask, pandas
+        run: pip install flask, pandas
       - name: Run tests
         run: pytest -vv
   run_code:
