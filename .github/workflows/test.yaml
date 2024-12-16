@@ -43,10 +43,10 @@ jobs:
         with:
           python-version: '3.1'
       - name: Install dotenv
-        run: pip3 install python-dotenv
+        run: python -m pip install python-dotenv
       - name: Run code and print file
         run: |
-          pip3 list
+          pip list
           pwd
           ls
           python main.py
