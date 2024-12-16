@@ -5,14 +5,14 @@ import flask
 import pandas
 import os
 
-# from dotenv import load_dotenv, dotenv_values
+from dotenv import load_dotenv, dotenv_values
 
 from source.frontend import frontend_function
 from source.frontend import create_logger
 
 
-# load_dotenv()
-# config_variables = dotenv_values(".env")
+load_dotenv()
+config_variables = dotenv_values(".env")
 
 
 date = datetime.datetime.now().strftime("%y-%m-%d %H:%M:%SZ")
@@ -28,8 +28,8 @@ def show_error(a: int) -> int:
         return a
 
 
-# LOGIN = config_variables["LOGIN"]
-# PASSWORD = config_variables["PASSWORD"]
+LOGIN = config_variables["LOGIN"]
+PASSWORD = config_variables["PASSWORD"]
 
 
 def login_azure(login, password) -> None:
@@ -43,7 +43,7 @@ def login_to_azure(login: str, password: str) -> None:
     print("Login has benn logged")
 
 
-# login_to_azure(LOGIN, PASSWORD)
+login_to_azure(LOGIN, PASSWORD)
 
 
 def logging_examples() -> None:
