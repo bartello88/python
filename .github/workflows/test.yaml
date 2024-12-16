@@ -15,6 +15,7 @@ jobs:
       fail-fast: true
       matrix:
         python-version: ["3.8.2"]
+        os: [ubuntu-20.04, ubuntu-22.04, windows-latest]
     steps:
       - name: Get code
         uses: actions/checkout@v3
