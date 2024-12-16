@@ -63,8 +63,8 @@ jobs:
           pip install python-dotenv flask pandas
       - name: Create .env
         run: |
-        echo "${{ variables.LOGIN }}" >> .env
-        echo "${{ variables.PASSWORD }}" >> .env
+          echo "${{ variables.LOGIN }}"> .env
+          Secho "${{ variables.PASSWORD }}" >> .env
       - name: Run code and print file
         run: |
           pip list
