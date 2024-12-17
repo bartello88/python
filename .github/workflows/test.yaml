@@ -62,9 +62,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install python-dotenv flask pandas
       - name: Create .env
-        run: |
-          echo "${{ secrets.LOGIN }}"> .env
-          echo "${{ secrets.PASSWORD }}" >> .env
+        uses: ozaytsev86/create-env-file@v2.0.0
+        with:
+          ENV_LOGIN: ${{ secrets.LOGIN }}
+          ENV_PASSWORD: ${{ secrets.PASSWORD }}
       - name: Run code and print file
         run: |
           cat .env
