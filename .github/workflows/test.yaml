@@ -67,7 +67,6 @@ jobs:
           envkey_LOGIN: ${{ secrets.LOGIN }}
           envkey_PASSWORD: ${{ secrets.PASSWORD }}
           file_name: .env
-          directory: ${{pwd}}
       - name: Run code and print file
         run: |
           cat .env
