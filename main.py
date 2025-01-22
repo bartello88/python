@@ -1,6 +1,8 @@
 import logging
 from logging.handlers import SysLogHandler
 import datetime
+import flask
+import pandas
 import os
 
 from dotenv import load_dotenv, dotenv_values
@@ -17,8 +19,6 @@ date = datetime.datetime.now().strftime("%y-%m-%d %H:%M:%SZ")
 
 logging.basicConfig(filename="logs.log", level=logging.INFO)
 logger = logging.getLogger("app")
-
-name: str = "Bart"
 
 
 def show_error(a: int) -> int:
@@ -40,17 +40,13 @@ def login_azure(login, password) -> None:
 
 
 def login_to_azure(login: str, password: str) -> None:
-    azure = login_azure(login, password)
-    print(f"Login has benn logged")
+    print("Login has benn logged")
 
 
 login_to_azure(LOGIN, PASSWORD)
 
 
 def logging_examples() -> None:
-
-    LOG_HOST = "asdasd"
-    LOG_PORT = 3467
 
     logger = create_logger("Test_Loger", "logger.log", "INFO")
     logger.info("asdasd")

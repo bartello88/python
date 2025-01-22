@@ -1,0 +1,10 @@
+version: v1
+app_name: "Docker_App"
+components:
+  - com1: 
+    name: "Bart"
+    age: 19
+  - com2:
+    name: "Adam"
+    age: 45
+    kids_age: [34,65,23]
