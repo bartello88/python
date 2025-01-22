@@ -8,6 +8,10 @@ logging.basicConfig(filename="logs.log", level=logging.INFO)
 logger = logging.getLogger("app")
 
 
+def return_sorted_list(list: numbers) -> list:
+    return [i for i in numbers if i % 2 == 0].sort
+
+
 # %%#
 def show_error(a: int) -> int:
     """
@@ -37,6 +41,3 @@ def devide_by_zero(a: int, b: int) -> int:
 
 
 devide_by_zero(3, 4)
-
-
-# %%
